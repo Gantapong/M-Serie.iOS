@@ -1,0 +1,686 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2DD14FBC8638909CF73BDBB9 /* Pods_SolarlaaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17D2A10B3E2573D920BF1D8B /* Pods_SolarlaaTests.framework */; };
+		4EA86353210EBFBD002032A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA86352210EBFBD002032A4 /* AppDelegate.swift */; };
+		4EA86355210EBFBD002032A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA86354210EBFBD002032A4 /* ViewController.swift */; };
+		4EA86358210EBFBD002032A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EA86356210EBFBD002032A4 /* Main.storyboard */; };
+		4EA8635A210EBFBF002032A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EA86359210EBFBF002032A4 /* Assets.xcassets */; };
+		4EA8635D210EBFBF002032A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EA8635B210EBFBF002032A4 /* LaunchScreen.storyboard */; };
+		4EA86368210EBFBF002032A4 /* SolarlaaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA86367210EBFBF002032A4 /* SolarlaaTests.swift */; };
+		4EA86373210EBFBF002032A4 /* SolarlaaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA86372210EBFBF002032A4 /* SolarlaaUITests.swift */; };
+		5472BEE70CA0FFFF219A2329 /* Pods_SolarlaaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA8A0EABE4D1A6CBFC2F5F93 /* Pods_SolarlaaUITests.framework */; };
+		F3C438BA6CBEDFAFF7C9420A /* Pods_Solarlaa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C8A4B50A5213B41CE942D88 /* Pods_Solarlaa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4EA86364210EBFBF002032A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4EA86347210EBFBC002032A4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4EA8634E210EBFBC002032A4;
+			remoteInfo = Solarlaa;
+		};
+		4EA8636F210EBFBF002032A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4EA86347210EBFBC002032A4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4EA8634E210EBFBC002032A4;
+			remoteInfo = Solarlaa;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		17D2A10B3E2573D920BF1D8B /* Pods_SolarlaaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SolarlaaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B18127EFADCEF4FADEBF40D /* Pods-SolarlaaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SolarlaaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SolarlaaTests/Pods-SolarlaaTests.release.xcconfig"; sourceTree = "<group>"; };
+		2F10CF884A8E97FE6B256166 /* Pods-SolarlaaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SolarlaaUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SolarlaaUITests/Pods-SolarlaaUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4EA8634F210EBFBD002032A4 /* Solarlaa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Solarlaa.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EA86352210EBFBD002032A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4EA86354210EBFBD002032A4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4EA86357210EBFBD002032A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4EA86359210EBFBF002032A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4EA8635C210EBFBF002032A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4EA8635E210EBFBF002032A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4EA86363210EBFBF002032A4 /* SolarlaaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SolarlaaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EA86367210EBFBF002032A4 /* SolarlaaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolarlaaTests.swift; sourceTree = "<group>"; };
+		4EA86369210EBFBF002032A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4EA8636E210EBFBF002032A4 /* SolarlaaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SolarlaaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EA86372210EBFBF002032A4 /* SolarlaaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolarlaaUITests.swift; sourceTree = "<group>"; };
+		4EA86374210EBFBF002032A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C8A4B50A5213B41CE942D88 /* Pods_Solarlaa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Solarlaa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C08A55743B65DD90C7E0BFD /* Pods-Solarlaa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Solarlaa.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Solarlaa/Pods-Solarlaa.debug.xcconfig"; sourceTree = "<group>"; };
+		A435173EAC5380BE22469DAD /* Pods-SolarlaaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SolarlaaUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SolarlaaUITests/Pods-SolarlaaUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B9F0EF22CA996F43602F054B /* Pods-Solarlaa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Solarlaa.release.xcconfig"; path = "Pods/Target Support Files/Pods-Solarlaa/Pods-Solarlaa.release.xcconfig"; sourceTree = "<group>"; };
+		DA8A0EABE4D1A6CBFC2F5F93 /* Pods_SolarlaaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SolarlaaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3342B8DFDC320DF3EF0DE27 /* Pods-SolarlaaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SolarlaaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SolarlaaTests/Pods-SolarlaaTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4EA8634C210EBFBC002032A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3C438BA6CBEDFAFF7C9420A /* Pods_Solarlaa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EA86360210EBFBF002032A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DD14FBC8638909CF73BDBB9 /* Pods_SolarlaaTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EA8636B210EBFBF002032A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5472BEE70CA0FFFF219A2329 /* Pods_SolarlaaUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		14301114F54BF3680DC77640 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6C8A4B50A5213B41CE942D88 /* Pods_Solarlaa.framework */,
+				17D2A10B3E2573D920BF1D8B /* Pods_SolarlaaTests.framework */,
+				DA8A0EABE4D1A6CBFC2F5F93 /* Pods_SolarlaaUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		42DABA24E71D814C6F4C0723 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7C08A55743B65DD90C7E0BFD /* Pods-Solarlaa.debug.xcconfig */,
+				B9F0EF22CA996F43602F054B /* Pods-Solarlaa.release.xcconfig */,
+				F3342B8DFDC320DF3EF0DE27 /* Pods-SolarlaaTests.debug.xcconfig */,
+				2B18127EFADCEF4FADEBF40D /* Pods-SolarlaaTests.release.xcconfig */,
+				A435173EAC5380BE22469DAD /* Pods-SolarlaaUITests.debug.xcconfig */,
+				2F10CF884A8E97FE6B256166 /* Pods-SolarlaaUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4EA86346210EBFBC002032A4 = {
+			isa = PBXGroup;
+			children = (
+				4EA86351210EBFBD002032A4 /* Solarlaa */,
+				4EA86366210EBFBF002032A4 /* SolarlaaTests */,
+				4EA86371210EBFBF002032A4 /* SolarlaaUITests */,
+				4EA86350210EBFBD002032A4 /* Products */,
+				42DABA24E71D814C6F4C0723 /* Pods */,
+				14301114F54BF3680DC77640 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4EA86350210EBFBD002032A4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4EA8634F210EBFBD002032A4 /* Solarlaa.app */,
+				4EA86363210EBFBF002032A4 /* SolarlaaTests.xctest */,
+				4EA8636E210EBFBF002032A4 /* SolarlaaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4EA86351210EBFBD002032A4 /* Solarlaa */ = {
+			isa = PBXGroup;
+			children = (
+				4EA86352210EBFBD002032A4 /* AppDelegate.swift */,
+				4EA86354210EBFBD002032A4 /* ViewController.swift */,
+				4EA86356210EBFBD002032A4 /* Main.storyboard */,
+				4EA86359210EBFBF002032A4 /* Assets.xcassets */,
+				4EA8635B210EBFBF002032A4 /* LaunchScreen.storyboard */,
+				4EA8635E210EBFBF002032A4 /* Info.plist */,
+			);
+			path = Solarlaa;
+			sourceTree = "<group>";
+		};
+		4EA86366210EBFBF002032A4 /* SolarlaaTests */ = {
+			isa = PBXGroup;
+			children = (
+				4EA86367210EBFBF002032A4 /* SolarlaaTests.swift */,
+				4EA86369210EBFBF002032A4 /* Info.plist */,
+			);
+			path = SolarlaaTests;
+			sourceTree = "<group>";
+		};
+		4EA86371210EBFBF002032A4 /* SolarlaaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4EA86372210EBFBF002032A4 /* SolarlaaUITests.swift */,
+				4EA86374210EBFBF002032A4 /* Info.plist */,
+			);
+			path = SolarlaaUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4EA8634E210EBFBC002032A4 /* Solarlaa */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4EA86377210EBFC0002032A4 /* Build configuration list for PBXNativeTarget "Solarlaa" */;
+			buildPhases = (
+				2137AA384B188F41483C56E8 /* [CP] Check Pods Manifest.lock */,
+				4EA8634B210EBFBC002032A4 /* Sources */,
+				4EA8634C210EBFBC002032A4 /* Frameworks */,
+				4EA8634D210EBFBC002032A4 /* Resources */,
+				6689DD73C416AFF17C3E1C61 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Solarlaa;
+			productName = Solarlaa;
+			productReference = 4EA8634F210EBFBD002032A4 /* Solarlaa.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4EA86362210EBFBF002032A4 /* SolarlaaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4EA8637A210EBFC0002032A4 /* Build configuration list for PBXNativeTarget "SolarlaaTests" */;
+			buildPhases = (
+				EA7CC8A546E757862D27EB00 /* [CP] Check Pods Manifest.lock */,
+				4EA8635F210EBFBF002032A4 /* Sources */,
+				4EA86360210EBFBF002032A4 /* Frameworks */,
+				4EA86361210EBFBF002032A4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4EA86365210EBFBF002032A4 /* PBXTargetDependency */,
+			);
+			name = SolarlaaTests;
+			productName = SolarlaaTests;
+			productReference = 4EA86363210EBFBF002032A4 /* SolarlaaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4EA8636D210EBFBF002032A4 /* SolarlaaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4EA8637D210EBFC0002032A4 /* Build configuration list for PBXNativeTarget "SolarlaaUITests" */;
+			buildPhases = (
+				DD5156D4C1B547B08CA61277 /* [CP] Check Pods Manifest.lock */,
+				4EA8636A210EBFBF002032A4 /* Sources */,
+				4EA8636B210EBFBF002032A4 /* Frameworks */,
+				4EA8636C210EBFBF002032A4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4EA86370210EBFBF002032A4 /* PBXTargetDependency */,
+			);
+			name = SolarlaaUITests;
+			productName = SolarlaaUITests;
+			productReference = 4EA8636E210EBFBF002032A4 /* SolarlaaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4EA86347210EBFBC002032A4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = Nortisgroup;
+				TargetAttributes = {
+					4EA8634E210EBFBC002032A4 = {
+						CreatedOnToolsVersion = 9.4;
+					};
+					4EA86362210EBFBF002032A4 = {
+						CreatedOnToolsVersion = 9.4;
+						TestTargetID = 4EA8634E210EBFBC002032A4;
+					};
+					4EA8636D210EBFBF002032A4 = {
+						CreatedOnToolsVersion = 9.4;
+						TestTargetID = 4EA8634E210EBFBC002032A4;
+					};
+				};
+			};
+			buildConfigurationList = 4EA8634A210EBFBC002032A4 /* Build configuration list for PBXProject "Solarlaa" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4EA86346210EBFBC002032A4;
+			productRefGroup = 4EA86350210EBFBD002032A4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4EA8634E210EBFBC002032A4 /* Solarlaa */,
+				4EA86362210EBFBF002032A4 /* SolarlaaTests */,
+				4EA8636D210EBFBF002032A4 /* SolarlaaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4EA8634D210EBFBC002032A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EA8635D210EBFBF002032A4 /* LaunchScreen.storyboard in Resources */,
+				4EA8635A210EBFBF002032A4 /* Assets.xcassets in Resources */,
+				4EA86358210EBFBD002032A4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EA86361210EBFBF002032A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EA8636C210EBFBF002032A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2137AA384B188F41483C56E8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Solarlaa-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6689DD73C416AFF17C3E1C61 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Solarlaa/Pods-Solarlaa-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Solarlaa/Pods-Solarlaa-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DD5156D4C1B547B08CA61277 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SolarlaaUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EA7CC8A546E757862D27EB00 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SolarlaaTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4EA8634B210EBFBC002032A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EA86355210EBFBD002032A4 /* ViewController.swift in Sources */,
+				4EA86353210EBFBD002032A4 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EA8635F210EBFBF002032A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EA86368210EBFBF002032A4 /* SolarlaaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EA8636A210EBFBF002032A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EA86373210EBFBF002032A4 /* SolarlaaUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4EA86365210EBFBF002032A4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4EA8634E210EBFBC002032A4 /* Solarlaa */;
+			targetProxy = 4EA86364210EBFBF002032A4 /* PBXContainerItemProxy */;
+		};
+		4EA86370210EBFBF002032A4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4EA8634E210EBFBC002032A4 /* Solarlaa */;
+			targetProxy = 4EA8636F210EBFBF002032A4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4EA86356210EBFBD002032A4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4EA86357210EBFBD002032A4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4EA8635B210EBFBF002032A4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4EA8635C210EBFBF002032A4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4EA86375210EBFBF002032A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4EA86376210EBFBF002032A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4EA86378210EBFC0002032A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C08A55743B65DD90C7E0BFD /* Pods-Solarlaa.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Solarlaa/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Nortisgroup.Solarlaa;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4EA86379210EBFC0002032A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9F0EF22CA996F43602F054B /* Pods-Solarlaa.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Solarlaa/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Nortisgroup.Solarlaa;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4EA8637B210EBFC0002032A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3342B8DFDC320DF3EF0DE27 /* Pods-SolarlaaTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SolarlaaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Nortisgroup.SolarlaaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Solarlaa.app/Solarlaa";
+			};
+			name = Debug;
+		};
+		4EA8637C210EBFC0002032A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B18127EFADCEF4FADEBF40D /* Pods-SolarlaaTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SolarlaaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Nortisgroup.SolarlaaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Solarlaa.app/Solarlaa";
+			};
+			name = Release;
+		};
+		4EA8637E210EBFC0002032A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A435173EAC5380BE22469DAD /* Pods-SolarlaaUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SolarlaaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Nortisgroup.SolarlaaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Solarlaa;
+			};
+			name = Debug;
+		};
+		4EA8637F210EBFC0002032A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F10CF884A8E97FE6B256166 /* Pods-SolarlaaUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SolarlaaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Nortisgroup.SolarlaaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Solarlaa;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4EA8634A210EBFBC002032A4 /* Build configuration list for PBXProject "Solarlaa" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4EA86375210EBFBF002032A4 /* Debug */,
+				4EA86376210EBFBF002032A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4EA86377210EBFC0002032A4 /* Build configuration list for PBXNativeTarget "Solarlaa" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4EA86378210EBFC0002032A4 /* Debug */,
+				4EA86379210EBFC0002032A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4EA8637A210EBFC0002032A4 /* Build configuration list for PBXNativeTarget "SolarlaaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4EA8637B210EBFC0002032A4 /* Debug */,
+				4EA8637C210EBFC0002032A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4EA8637D210EBFC0002032A4 /* Build configuration list for PBXNativeTarget "SolarlaaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4EA8637E210EBFC0002032A4 /* Debug */,
+				4EA8637F210EBFC0002032A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4EA86347210EBFBC002032A4 /* Project object */;
+}
