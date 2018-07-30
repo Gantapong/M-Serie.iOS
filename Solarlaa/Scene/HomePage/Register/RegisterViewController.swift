@@ -10,10 +10,23 @@ import UIKit
 
 class RegisterViewController: UIViewController {
 
+    // MARK: IBOutlet
+    @IBOutlet weak var lbTitle: UILabel!
+    @IBOutlet weak var txtfFirstname: UITextField!
+    @IBOutlet weak var txtfLastname: UITextField!
+    @IBOutlet weak var txtfAddress: UITextField!
+    @IBOutlet weak var txtfEmail: UITextField!
+    @IBOutlet weak var txtfCreatePassword: UITextField!
+    @IBOutlet weak var txtfConfirmPassword: UITextField!
+    @IBOutlet weak var btnRegister: UIButton!
+    @IBOutlet weak var lbOr: UILabel!
+    @IBOutlet weak var btnFacebook: UIButton!
+    @IBOutlet weak var btnGoogle: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        setupGUI()
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,15 +34,22 @@ class RegisterViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // MARK: Methods
+    func setupGUI() {
+        lbOr.setAllCorners(lbOr.frame.size.height / 2)
     }
-    */
+    
+    // MARK: IBAction
+    @IBAction func btnRegisterTapped(_ sender: Any) {
+    
+    }
 
+    @IBAction func btnFacebookTapped(_ sender: Any) {
+    
+    }
+    
+    @IBAction func btnGoogleTapped(_ sender: Any) {
+    
+    }
+    
 }
