@@ -46,8 +46,9 @@ class SideMenuViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "SideMenuTableViewCell", for: indexPath)
-        cell.textLabel?.text = arrMenu[indexPath.row]["title"] as? String
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SideMenuTableViewCell", for: indexPath) as! SideMenuTableViewCell
+        cell.viewContent.setAllCorners(5)
+        cell.lbTitle.text = arrMenu[indexPath.row]["title"] as? String
         return cell
     }
     

@@ -33,6 +33,8 @@ class ContainerViewController: UIViewController, MainViewControllerDelegate {
     
     // MARK: Methods
     private func setupGUI() {
+        sideMenuWidth.constant = UIScreen.main.bounds.size.width - 80
+        sideMenuLeading.constant = -sideMenuWidth.constant
         viewCancelTouch.isHidden = true
         let tap = UITapGestureRecognizer(target: self, action: #selector(viewCancelTouchTapped))
         tap.numberOfTapsRequired = 1
@@ -42,7 +44,86 @@ class ContainerViewController: UIViewController, MainViewControllerDelegate {
     
     @objc private func viewCancelTouchTapped() {
         showHideSideMenu(false)
-        mainViewController?.isShowSideMenu = false
+    }
+    
+    // MARK: IBAction
+    @IBAction func screenEdgePanGestureToOpen(_ sender: UIScreenEdgePanGestureRecognizer) {
+        if !isSideMenuShow {
+            if sender.state == .began || sender.state == .changed {
+                let locationX = sender.location(in: view).x
+                var newLeading = -sideMenuWidth.constant + locationX
+                if newLeading > 0 {
+                    newLeading = 0
+                }
+                else if newLeading < -sideMenuWidth.constant {
+                    newLeading = -sideMenuWidth.constant
+                }
+                sideMenuLeading.constant = newLeading
+                UIView.animate(withDuration: 0.1) {
+                    self.view.layoutIfNeeded()
+                }
+            }
+            else if sender.state == .ended {
+                let velocityX = sender.velocity(in: view).x
+                if abs(velocityX) > 1500 {
+                    if velocityX > 0 {
+                        showHideSideMenu(true)
+                    }
+                    else {
+                        showHideSideMenu(false)
+                    }
+                }
+                else {
+                    if sideMenuLeading.constant >= -sideMenuWidth.constant / 2 {
+                        showHideSideMenu(true)
+                    }
+                    else {
+                        showHideSideMenu(false)
+                    }
+                }
+            }
+        }
+    }
+    
+    @IBAction func panGestureToClose(_ sender: UIPanGestureRecognizer) {
+        if isSideMenuShow {
+            let locationX = sender.location(in: view).x
+            if locationX <= sideMenuWidth.constant {
+                if sender.state == .began || sender.state == .changed {
+                    let translationX = sender.translation(in: view).x
+                    var newLeading = translationX
+                    if newLeading > 0 {
+                        newLeading = 0
+                    }
+                    else if newLeading < -sideMenuWidth.constant {
+                        newLeading = -sideMenuWidth.constant
+                    }
+                    sideMenuLeading.constant = newLeading
+                    UIView.animate(withDuration: 0.1) {
+                        self.view.layoutIfNeeded()
+                    }
+                }
+                else if sender.state == .ended {
+                    let velocityX = sender.velocity(in: view).x
+                    if abs(velocityX) > 1500 {
+                        if velocityX > 0 {
+                            showHideSideMenu(true)
+                        }
+                        else {
+                            showHideSideMenu(false)
+                        }
+                    }
+                    else {
+                        if sideMenuLeading.constant >= -sideMenuWidth.constant / 2 {
+                            showHideSideMenu(true)
+                        }
+                        else {
+                            showHideSideMenu(false)
+                        }
+                    }
+                }
+            }
+        }
     }
     
     // MARK: Delegate
@@ -64,6 +145,7 @@ class ContainerViewController: UIViewController, MainViewControllerDelegate {
                 self.viewCancelTouch.isHidden = true
             }
         }
+        mainViewController?.isShowSideMenu = isShow
     }
     
     // MARK: Segue
