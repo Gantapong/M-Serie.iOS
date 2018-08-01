@@ -319,3 +319,7 @@ extension UIColor{
     }
 }
 
+extension Notification.Name {
+    static let didChooseMenuFromSideMenu = Notification.Name("didChooseMenuFromSideMenu")
+}
+
