@@ -19,6 +19,7 @@ class ContainerViewController: UIViewController, MainViewControllerDelegate {
     var mainViewController: MainViewController?
     var sideMenuViewController: SideMenuViewController?
     var isSideMenuShow: Bool = false
+    var translationInSideMenu: CGFloat?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -90,8 +91,11 @@ class ContainerViewController: UIViewController, MainViewControllerDelegate {
             let locationX = sender.location(in: view).x
             if locationX <= sideMenuWidth.constant {
                 if sender.state == .began || sender.state == .changed {
+                    if translationInSideMenu == nil {
+                        translationInSideMenu = sender.translation(in: view).x
+                    }
                     let translationX = sender.translation(in: view).x
-                    var newLeading = translationX
+                    var newLeading = translationX - translationInSideMenu!
                     if newLeading > 0 {
                         newLeading = 0
                     }
@@ -121,6 +125,7 @@ class ContainerViewController: UIViewController, MainViewControllerDelegate {
                             showHideSideMenu(false)
                         }
                     }
+                    translationInSideMenu = nil
                 }
             }
         }
