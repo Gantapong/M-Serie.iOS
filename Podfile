@@ -6,7 +6,11 @@ target 'Solarlaa' do
   use_frameworks!
 
   # Pods for Solarlaa
-	pod 'Alamofire', '~> 4.5'
+    pod 'Alamofire', '~> 4.5'	
+    pod 'FBSDKLoginKit'
+    pod 'GoogleSignIn'
+    pod 'Firebase/Core'
+    pod 'Firebase/Messaging'
 
   target 'SolarlaaTests' do
     inherit! :search_paths

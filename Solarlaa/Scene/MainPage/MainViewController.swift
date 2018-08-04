@@ -24,7 +24,9 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        NotificationCenter.default.addObserver(self, selector: #selector(didChangeLanguage), name: .didChangeLanguage, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(didChooseMenuFromSideMenu(_:)), name: .didChooseMenuFromSideMenu, object: nil)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,13 +36,26 @@ class MainViewController: UIViewController {
     
     // MARK: Methods
     @objc func didChooseMenuFromSideMenu(_ notification: Notification) {
-        let userInfo = notification.userInfo
-        view.backgroundColor = userInfo?["data"] as? UIColor
+        guard let userInfo = notification.userInfo else { return }
+        
+        view.backgroundColor = userInfo["data"] as? UIColor
         btnHamburgerTapped(btnHamburger)
+    }
+    
+    @objc private func didChangeLanguage() {
+        if Configurators.languages == .EN {
+            print("EN")
+            Configurators.languages = .TH
+        }
+        else {
+            print("TH")
+            Configurators.languages = .EN
+        }
     }
     
     // MARK: IBAction
     @IBAction func btnHamburgerTapped(_ sender: Any) {
+        didChangeLanguage()
         if delegate != nil {
             isShowSideMenu = !isShowSideMenu
             delegate?.showHideSideMenu(isShowSideMenu)

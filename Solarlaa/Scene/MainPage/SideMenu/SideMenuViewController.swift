@@ -20,6 +20,7 @@ class SideMenuViewController: UIViewController, UITableViewDataSource, UITableVi
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        NotificationCenter.default.addObserver(self, selector: #selector(didChangeLanguage), name: .didChangeLanguage, object: nil)
         setupGUI()
     }
 
@@ -37,6 +38,15 @@ class SideMenuViewController: UIViewController, UITableViewDataSource, UITableVi
         tableView.dataSource = self
         tableView.delegate = self
         tableView.reloadData()
+    }
+    
+    @objc private func didChangeLanguage() {
+        if Configurators.languages == .EN {
+            
+        }
+        else {
+            
+        }
     }
     
     // MARK: Delegate
