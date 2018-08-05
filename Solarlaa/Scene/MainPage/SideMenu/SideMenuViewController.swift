@@ -12,6 +12,9 @@ class SideMenuViewController: UIViewController, UITableViewDataSource, UITableVi
 
     // MARK: IBOutlet
     @IBOutlet weak var viewUpper: UIView!
+    @IBOutlet weak var imgViewProfile: CustomImageViewProfile!
+    @IBOutlet weak var lbName: UILabel!
+    @IBOutlet weak var lbId: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
     // MARK: Properties
