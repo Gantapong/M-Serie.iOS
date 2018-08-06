@@ -18,6 +18,7 @@ class SideMenuTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        setupGUI()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -25,4 +26,7 @@ class SideMenuTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    func setupGUI() {
+        viewContent.setAllCorners(5)
+    }
 }

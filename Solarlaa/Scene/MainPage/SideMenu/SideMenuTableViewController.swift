@@ -1,29 +1,25 @@
 //
-//  SideMenuViewController.swift
+//  SideMenuTableViewController.swift
 //  Solarlaa
 //
-//  Created by GISC on 1/8/2561 BE.
+//  Created by GISC on 6/8/2561 BE.
 //  Copyright © 2561 Nortisgroup. All rights reserved.
 //
 
 import UIKit
 
-class SideMenuViewController: UIViewController {
+protocol SideMenuTableViewControllerDelegate {
+    func didChooseMenu()
+}
 
-    // MARK: IBOutlet
-    @IBOutlet weak var viewUpper: UIView!
-    @IBOutlet weak var imgViewProfile: CustomImageViewProfile!
-    @IBOutlet weak var lbName: UILabel!
-    @IBOutlet weak var lbId: UILabel!
-    
+class SideMenuTableViewController: UITableViewController {
+
     // MARK: Properties
-    var arrMenu: Array<[String: Any]> = []
+    var delegate: SideMenuTableViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         NotificationCenter.default.addObserver(self, selector: #selector(didChangeLanguage), name: .didChangeLanguage, object: nil)
-        setupGUI()
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,9 +28,6 @@ class SideMenuViewController: UIViewController {
     }
     
     // MARK: Methods
-    private func setupGUI() {
-    }
-    
     @objc private func didChangeLanguage() {
         if Configurators.languages == .EN {
             
@@ -44,9 +37,11 @@ class SideMenuViewController: UIViewController {
         }
     }
     
-    // MARK: Segue
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if delegate != nil {
+            let userInfo = ["data": UIColor.red]
+            NotificationCenter.default.post(name: .didChooseMenuFromSideMenu, object: nil, userInfo: userInfo)
+        }
     }
 
 }

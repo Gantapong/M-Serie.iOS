@@ -14,6 +14,7 @@
 		4E020311210F2BD80049D88D /* CoreFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E020310210F2BD80049D88D /* CoreFunction.swift */; };
 		4E020313210F2BE70049D88D /* Configurators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E020312210F2BE70049D88D /* Configurators.swift */; };
 		4E020315210F2E300049D88D /* ReqWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E020314210F2E300049D88D /* ReqWebService.swift */; };
+		4E607F2921188F6E0022807A /* SideMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E607F2821188F6E0022807A /* SideMenuTableViewController.swift */; };
 		4E7AC1032111D2540093220E /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7AC1022111D2540093220E /* SideMenuViewController.swift */; };
 		4E7AC1052111D2720093220E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7AC1042111D2720093220E /* MainViewController.swift */; };
 		4E7AC1072111D2E70093220E /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7AC1062111D2E70093220E /* ContainerViewController.swift */; };
@@ -59,6 +60,7 @@
 		4E020310210F2BD80049D88D /* CoreFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreFunction.swift; sourceTree = "<group>"; };
 		4E020312210F2BE70049D88D /* Configurators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurators.swift; sourceTree = "<group>"; };
 		4E020314210F2E300049D88D /* ReqWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReqWebService.swift; sourceTree = "<group>"; };
+		4E607F2821188F6E0022807A /* SideMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewController.swift; sourceTree = "<group>"; };
 		4E7AC1022111D2540093220E /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		4E7AC1042111D2720093220E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		4E7AC1062111D2E70093220E /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				4E7AC1022111D2540093220E /* SideMenuViewController.swift */,
+				4E607F2821188F6E0022807A /* SideMenuTableViewController.swift */,
 				4E7AC1092112027F0093220E /* SideMenuTableViewCell.swift */,
 			);
 			path = SideMenu;
@@ -536,6 +539,7 @@
 				4E7AC10A2112027F0093220E /* SideMenuTableViewCell.swift in Sources */,
 				4E7AC1072111D2E70093220E /* ContainerViewController.swift in Sources */,
 				4EA86353210EBFBD002032A4 /* AppDelegate.swift in Sources */,
+				4E607F2921188F6E0022807A /* SideMenuTableViewController.swift in Sources */,
 				4E880B842115A63100AB35E2 /* CustomImageViewProfile.swift in Sources */,
 				4E880B862115A99C00AB35E2 /* User.swift in Sources */,
 				4E02030C210ECF920049D88D /* RegisterViewController.swift in Sources */,
@@ -718,16 +722,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = NF49UL2R3E;
 				INFOPLIST_FILE = Solarlaa/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Nortisgroup.Solarlaa;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nortisgroup.solarlaaBox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "38567617-ea81-479e-9ddf-0f34a8becf8f";
+				PROVISIONING_PROFILE_SPECIFIER = "Solarlaa Box Development";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -738,17 +743,19 @@
 			baseConfigurationReference = B9F0EF22CA996F43602F054B /* Pods-Solarlaa.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = NF49UL2R3E;
 				INFOPLIST_FILE = Solarlaa/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Nortisgroup.Solarlaa;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nortisgroup.solarlaaBox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "d80f2462-dc12-4aec-97d2-4125ef7f23da";
+				PROVISIONING_PROFILE_SPECIFIER = "Solarlaa Box Distribution";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FBSDKLoginKit
 
 class LoginViewController: UIViewController {
 
@@ -30,8 +31,12 @@ class LoginViewController: UIViewController {
     }
     
     // MARK: Methods
-    func setupGUI() {
+    private func setupGUI() {
         lbOr.setAllCorners(lbOr.frame.size.height / 2)
+    }
+    
+    private func getFacebookProfile() {
+        
     }
     
     // MARK: IBAction
@@ -40,7 +45,25 @@ class LoginViewController: UIViewController {
     }
 
     @IBAction func btnFacebookTapped(_ sender: Any) {
-        
+        if FBSDKAccessToken.current() != nil {
+            getFacebookProfile()
+        }
+        else {
+            FBSDKLoginManager().logIn(withReadPermissions: ["public_profile", "email"], from: self) { (result, error) in
+                if let error = error {
+                    print(error.localizedDescription)
+                }
+                else {
+                    guard let result = result else { return }
+                    if result.isCancelled {
+                        print("Cancelled")
+                    }
+                    else {
+                        self.getFacebookProfile()
+                    }
+                }
+            }
+        }
     }
     
     @IBAction func btnGoogleTapped(_ sender: Any) {

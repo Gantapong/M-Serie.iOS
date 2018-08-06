@@ -34,8 +34,8 @@ class ContainerViewController: UIViewController, MainViewControllerDelegate {
     
     // MARK: Methods
     private func setupGUI() {
-        sideMenuWidth.constant = UIScreen.main.bounds.size.width - 80
-        sideMenuLeading.constant = -sideMenuWidth.constant
+//        sideMenuWidth.constant = UIScreen.main.bounds.size.width - 80
+//        sideMenuLeading.constant = -sideMenuWidth.constant
         viewCancelTouch.isHidden = true
         let tap = UITapGestureRecognizer(target: self, action: #selector(viewCancelTouchTapped))
         tap.numberOfTapsRequired = 1
