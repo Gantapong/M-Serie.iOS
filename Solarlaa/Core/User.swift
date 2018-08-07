@@ -9,6 +9,7 @@
 import Foundation
 
 struct User{
+    var token: String?
     var userId: String?
     var imageProfile: String?
     var firstname: String?
@@ -19,9 +20,10 @@ struct User{
 
 class UserSingleton {
     static let shared = UserSingleton()
-    var user = User(userId: "", imageProfile: "", firstname: "", lastname: "", email: "", address: "")
+    var user = User(token: "",userId: "", imageProfile: "", firstname: "", lastname: "", email: "", address: "")
     
     func updateToUserDefault() {
+        UserDefaults.standard.set(UserSingleton.shared.user.token, forKey: "TOKEN")
         UserDefaults.standard.set(UserSingleton.shared.user.userId, forKey: "USER_ID")
         UserDefaults.standard.set(UserSingleton.shared.user.imageProfile, forKey: "CID")
         UserDefaults.standard.set(UserSingleton.shared.user.firstname, forKey: "PROFILE_IMG")
@@ -31,6 +33,7 @@ class UserSingleton {
     }
     
     func updateFromUserDefault(){
+        UserSingleton.shared.user.token = UserDefaults.standard.object(forKey: "TOKEN") as? String
         UserSingleton.shared.user.userId = UserDefaults.standard.object(forKey: "USER_ID") as? String
         UserSingleton.shared.user.imageProfile = UserDefaults.standard.object(forKey: "CID") as? String
         UserSingleton.shared.user.firstname = UserDefaults.standard.object(forKey: "PROFILE_IMG") as? String

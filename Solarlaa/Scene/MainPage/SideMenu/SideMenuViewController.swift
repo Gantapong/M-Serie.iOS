@@ -33,6 +33,8 @@ class SideMenuViewController: UIViewController {
     
     // MARK: Methods
     private func setupGUI() {
+        imgViewProfile.downloadedFrom(link: UserSingleton.shared.user.imageProfile ?? "")
+        lbName.text = "\(UserSingleton.shared.user.firstname ?? "") \(UserSingleton.shared.user.lastname ?? "")"
     }
     
     @objc private func didChangeLanguage() {

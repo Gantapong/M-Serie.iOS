@@ -41,17 +41,19 @@ class CoreFunction {
         return false
     }
     
-    class func setUserDetail(userDetail: [String: Any]){
-        UserSingleton.shared.user.userId = userDetail["USER_ID"] as? String ?? ""
-        UserSingleton.shared.user.imageProfile = userDetail["CID"] as? String ?? ""
-        UserSingleton.shared.user.firstname = userDetail["PROFILE_IMG"] as? String ?? ""
-        UserSingleton.shared.user.lastname = userDetail["NAME"] as? String ?? ""
-        UserSingleton.shared.user.email = userDetail["POINT"] as? String ?? ""
-        UserSingleton.shared.user.address = userDetail["TELNO"] as? String ?? ""
+    class func setUserDetail(userDetail: User){
+        UserSingleton.shared.user.token = userDetail.token
+        UserSingleton.shared.user.userId = userDetail.userId
+        UserSingleton.shared.user.imageProfile = userDetail.imageProfile
+        UserSingleton.shared.user.firstname = userDetail.firstname
+        UserSingleton.shared.user.lastname = userDetail.lastname
+        UserSingleton.shared.user.email = userDetail.email
+        UserSingleton.shared.user.address = userDetail.address
         UserSingleton.shared.updateToUserDefault()
     }
     
     class func signOut(){
+        UserSingleton.shared.user.token = nil
         UserSingleton.shared.user.userId = nil
         UserSingleton.shared.user.imageProfile = nil
         UserSingleton.shared.user.firstname = nil

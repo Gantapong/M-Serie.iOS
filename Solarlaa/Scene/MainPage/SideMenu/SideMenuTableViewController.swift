@@ -14,6 +14,17 @@ protocol SideMenuTableViewControllerDelegate {
 
 class SideMenuTableViewController: UITableViewController {
 
+    // MARK: IBOutlet
+    @IBOutlet weak var myProfile: UITableViewCell!
+    @IBOutlet weak var manageDevice: UITableViewCell!
+    @IBOutlet weak var monitoring: UITableViewCell!
+    @IBOutlet weak var summaryEnergyUsage: UITableViewCell!
+    @IBOutlet weak var sSeries: UITableViewCell!
+    @IBOutlet weak var notification: UITableViewCell!
+    @IBOutlet weak var setting: UITableViewCell!
+    @IBOutlet weak var help: UITableViewCell!
+    @IBOutlet weak var logout: UITableViewCell!
+    
     // MARK: Properties
     var delegate: SideMenuTableViewControllerDelegate?
     
@@ -38,9 +49,8 @@ class SideMenuTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if delegate != nil {
-            let userInfo = ["data": UIColor.red]
-            NotificationCenter.default.post(name: .didChooseMenuFromSideMenu, object: nil, userInfo: userInfo)
+        if tableView.cellForRow(at: indexPath) == logout {
+            NotificationCenter.default.post(name: .didChooseMenuFromSideMenu, object: nil, userInfo: [:])
         }
     }
 

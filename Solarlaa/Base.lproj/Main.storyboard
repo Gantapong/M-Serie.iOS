@@ -490,10 +490,10 @@
             </objects>
             <point key="canvasLocation" x="2059" y="870"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Side Menu Table View Controller-->
         <scene sceneID="sBj-aG-ejT">
             <objects>
-                <tableViewController id="cjo-dz-XAg" sceneMemberID="viewController">
+                <tableViewController id="cjo-dz-XAg" customClass="SideMenuTableViewController" customModule="Solarlaa" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Vex-hH-dfV">
                         <rect key="frame" x="0.0" y="0.0" width="280" height="507"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -977,6 +977,17 @@
                             <outlet property="delegate" destination="cjo-dz-XAg" id="4I2-84-4V2"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="help" destination="Sa4-Lm-yvX" id="Mb3-SH-zld"/>
+                        <outlet property="logout" destination="G3g-IG-a0E" id="raW-7F-jhu"/>
+                        <outlet property="manageDevice" destination="uVJ-dJ-35Y" id="eCe-gU-4Bu"/>
+                        <outlet property="monitoring" destination="iFZ-6q-7bd" id="Ozv-Sn-ZHD"/>
+                        <outlet property="myProfile" destination="K5v-gt-UGT" id="3AI-gv-pDT"/>
+                        <outlet property="notification" destination="GZw-xW-AiO" id="OgU-LF-suS"/>
+                        <outlet property="sSeries" destination="xQd-6d-X48" id="Suh-6G-E8H"/>
+                        <outlet property="setting" destination="QOh-aM-8o4" id="n3h-Ym-vnP"/>
+                        <outlet property="summaryEnergyUsage" destination="KLO-9F-qI1" id="5Ya-aj-5fH"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mAL-eV-Y3p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
