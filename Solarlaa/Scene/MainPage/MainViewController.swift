@@ -38,7 +38,6 @@ class MainViewController: UIViewController {
     @objc func didChooseMenuFromSideMenu(_ notification: Notification) {
         guard let userInfo = notification.userInfo else { return }
         
-        view.backgroundColor = userInfo["data"] as? UIColor
         btnHamburgerTapped(btnHamburger)
     }
     

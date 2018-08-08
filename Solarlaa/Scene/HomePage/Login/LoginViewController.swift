@@ -19,6 +19,7 @@ class LoginViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDeleg
     @IBOutlet weak var lbOr: UILabel!
     @IBOutlet weak var btnFacebook: UIButton!
     @IBOutlet weak var btnGoogle: UIButton!
+    @IBOutlet weak var btnClose: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,7 +54,7 @@ class LoginViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDeleg
                         let userDetail = User(token: FBSDKAccessToken.current().tokenString, userId: "", imageProfile: url, firstname: (profile["first_name"] as? String) ?? "", lastname: (profile["last_name"] as? String) ?? "", email: (profile["email"] as? String) ?? "", address: "")
                         CoreFunction.setUserDetail(userDetail: userDetail)
                         let vc = self.storyboard?.instantiateViewController(withIdentifier: "ContainerViewController")
-                        self.present(vc!, animated: true, completion: nil)
+                        self.navigationController?.setViewControllers([vc!], animated: false)
                     }
                 }
             }
@@ -98,10 +99,13 @@ class LoginViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDeleg
         GIDSignIn.sharedInstance().signIn()
     }
     
+    @IBAction func btnCloseTapped(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     // MARK: Delegate
     // MARK: GoogleSignInDelegate
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
-        self.hideLoading()
         if let error = error {
             print("\(error.localizedDescription)")
         } else {
@@ -112,13 +116,21 @@ class LoginViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDeleg
             let givenName = user.profile.givenName
             let familyName = user.profile.familyName
             let email = user.profile.email
-            let image = user.profile.imageURL(withDimension: 200)
+            let image = user.profile.imageURL(withDimension: 150)
             // ...
             let userDetail = User(token: idToken, userId: "", imageProfile: image?.absoluteString ?? "", firstname: givenName ?? "", lastname: familyName ?? "", email: email ?? "", address: "")
             CoreFunction.setUserDetail(userDetail: userDetail)
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "ContainerViewController")
-            self.present(vc!, animated: true, completion: nil)
+            navigationController?.setViewControllers([vc!], animated: false)
         }
+        
     }
-
+    
+    func sign(inWillDispatch signIn: GIDSignIn!, error: Error!) {
+        hideLoading()
+    }
+    
+    func sign(_ signIn: GIDSignIn!, dismiss viewController: UIViewController!) {
+        dismiss(animated: true, completion: nil)
+    }
 }

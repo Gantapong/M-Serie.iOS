@@ -22,6 +22,7 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var lbOr: UILabel!
     @IBOutlet weak var btnFacebook: UIButton!
     @IBOutlet weak var btnGoogle: UIButton!
+    @IBOutlet weak var btnClose: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,4 +53,7 @@ class RegisterViewController: UIViewController {
     
     }
     
+    @IBAction func btnCloseTapped(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
 }

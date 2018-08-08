@@ -50,7 +50,7 @@ class SideMenuTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if tableView.cellForRow(at: indexPath) == logout {
-            NotificationCenter.default.post(name: .didChooseMenuFromSideMenu, object: nil, userInfo: [:])
+            NotificationCenter.default.post(name: .didTapLogout, object: nil, userInfo: [:])
         }
     }
 

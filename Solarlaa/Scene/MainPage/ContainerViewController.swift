@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import FBSDKLoginKit
+import GoogleSignIn
 
 class ContainerViewController: UIViewController, MainViewControllerDelegate {
 
@@ -24,7 +26,13 @@ class ContainerViewController: UIViewController, MainViewControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        NotificationCenter.default.addObserver(self, selector: #selector(didTapLogout), name: .didTapLogout, object: nil)
         setupGUI()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: true)
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,6 +49,13 @@ class ContainerViewController: UIViewController, MainViewControllerDelegate {
         tap.numberOfTapsRequired = 1
         tap.cancelsTouchesInView = false
         viewCancelTouch.addGestureRecognizer(tap)
+    }
+    
+    @objc func didTapLogout() {
+        FBSDKLoginManager().logOut()
+        GIDSignIn.sharedInstance().signOut()
+        let vc = storyboard?.instantiateViewController(withIdentifier: "HomePageViewController")
+        navigationController?.setViewControllers([vc!], animated: true)
     }
     
     @objc private func viewCancelTouchTapped() {
@@ -163,7 +178,6 @@ class ContainerViewController: UIViewController, MainViewControllerDelegate {
                 mainViewController = navVC.viewControllers.first as? MainViewController
                 mainViewController?.delegate = self
             }
-            
         }
     }
 }

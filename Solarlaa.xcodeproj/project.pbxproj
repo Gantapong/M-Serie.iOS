@@ -22,6 +22,8 @@
 		4E880B802115A59500AB35E2 /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E880B7F2115A59500AB35E2 /* MyProfileViewController.swift */; };
 		4E880B842115A63100AB35E2 /* CustomImageViewProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E880B832115A63100AB35E2 /* CustomImageViewProfile.swift */; };
 		4E880B862115A99C00AB35E2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E880B852115A99C00AB35E2 /* User.swift */; };
+		4E96EB92211B3F94009148DD /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E96EB91211B3F94009148DD /* CustomNavigationController.swift */; };
+		4E96EB95211B5BAD009148DD /* FirstPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E96EB94211B5BAD009148DD /* FirstPageViewController.swift */; };
 		4EA86353210EBFBD002032A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA86352210EBFBD002032A4 /* AppDelegate.swift */; };
 		4EA86355210EBFBD002032A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA86354210EBFBD002032A4 /* ViewController.swift */; };
 		4EA86358210EBFBD002032A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EA86356210EBFBD002032A4 /* Main.storyboard */; };
@@ -68,6 +70,8 @@
 		4E880B7F2115A59500AB35E2 /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
 		4E880B832115A63100AB35E2 /* CustomImageViewProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageViewProfile.swift; sourceTree = "<group>"; };
 		4E880B852115A99C00AB35E2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		4E96EB91211B3F94009148DD /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
+		4E96EB94211B5BAD009148DD /* FirstPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPageViewController.swift; sourceTree = "<group>"; };
 		4EA8634F210EBFBD002032A4 /* Solarlaa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Solarlaa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EA86352210EBFBD002032A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4EA86354210EBFBD002032A4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -143,6 +147,7 @@
 		4E020304210ECEB10049D88D /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				4E96EB93211B5B8E009148DD /* FirstPage */,
 				4E880B7E2115A57600AB35E2 /* MyProfile */,
 				4E020306210ECF450049D88D /* HomePage */,
 				4E020305210ECEC80049D88D /* MainPage */,
@@ -219,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				4E880B822115A5FA00AB35E2 /* ImageViewProfile */,
+				4E96EB91211B3F94009148DD /* CustomNavigationController.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -229,6 +235,14 @@
 				4E880B832115A63100AB35E2 /* CustomImageViewProfile.swift */,
 			);
 			path = ImageViewProfile;
+			sourceTree = "<group>";
+		};
+		4E96EB93211B5B8E009148DD /* FirstPage */ = {
+			isa = PBXGroup;
+			children = (
+				4E96EB94211B5BAD009148DD /* FirstPageViewController.swift */,
+			);
+			path = FirstPage;
 			sourceTree = "<group>";
 		};
 		4EA86346210EBFBC002032A4 = {
@@ -538,6 +552,7 @@
 				4EA86355210EBFBD002032A4 /* ViewController.swift in Sources */,
 				4E7AC10A2112027F0093220E /* SideMenuTableViewCell.swift in Sources */,
 				4E7AC1072111D2E70093220E /* ContainerViewController.swift in Sources */,
+				4E96EB95211B5BAD009148DD /* FirstPageViewController.swift in Sources */,
 				4EA86353210EBFBD002032A4 /* AppDelegate.swift in Sources */,
 				4E607F2921188F6E0022807A /* SideMenuTableViewController.swift in Sources */,
 				4E880B842115A63100AB35E2 /* CustomImageViewProfile.swift in Sources */,
@@ -547,6 +562,7 @@
 				4E020311210F2BD80049D88D /* CoreFunction.swift in Sources */,
 				4E7AC1032111D2540093220E /* SideMenuViewController.swift in Sources */,
 				4E02030F210F2B630049D88D /* CoreExtension.swift in Sources */,
+				4E96EB92211B3F94009148DD /* CustomNavigationController.swift in Sources */,
 				4E7AC1052111D2720093220E /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
