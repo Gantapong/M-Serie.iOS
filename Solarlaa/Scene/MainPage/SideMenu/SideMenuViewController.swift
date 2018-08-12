@@ -33,6 +33,7 @@ class SideMenuViewController: UIViewController {
     
     // MARK: Methods
     private func setupGUI() {
+        imgViewProfile.addImageClick(self)
         imgViewProfile.downloadedFrom(link: UserSingleton.shared.user.imageProfile ?? "")
         lbName.text = "\(UserSingleton.shared.user.firstname ?? "") \(UserSingleton.shared.user.lastname ?? "")"
     }
@@ -44,11 +45,6 @@ class SideMenuViewController: UIViewController {
         else {
             
         }
-    }
-    
-    // MARK: Segue
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
     }
 
 }

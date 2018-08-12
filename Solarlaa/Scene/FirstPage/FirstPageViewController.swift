@@ -7,15 +7,17 @@
 //
 
 import UIKit
-import FBSDKLoginKit
-import GoogleSignIn
 
-class FirstPageViewController: UIViewController {
+class FirstPageViewController: UIViewController, FirstPageView {
 
+    // MARK: Properties
+    var presenter: FirstPagePresenter?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        checkUser()
+        presenter = FirstPagePresenter(firstPageView: self)
+        presenter?.checkIsLogin()
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,15 +26,23 @@ class FirstPageViewController: UIViewController {
     }
     
     // MARK: Methods
-    func checkUser() {
-        if FBSDKAccessToken.current() != nil || GIDSignIn.sharedInstance().hasAuthInKeychain() {
-            UserSingleton.shared.updateFromUserDefault()
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "ContainerViewController")
-            self.navigationController?.setViewControllers([vc!], animated: false)
+    func checkIsLogin(_ isLogin: Bool) {
+        if isLogin {
+            performSegue(withIdentifier: "MainPage", sender: nil)
         }
         else {
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "HomePageViewController")
-            self.navigationController?.setViewControllers([vc!], animated: false)
+            performSegue(withIdentifier: "HomePage", sender: nil)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "MainPage" {
+            let vc = segue.destination
+            navigationController?.setViewControllers([vc], animated: false)
+        }
+        else if segue.identifier == "HomePage" {
+            let vc = segue.destination
+            navigationController?.setViewControllers([vc], animated: false)
         }
     }
 }

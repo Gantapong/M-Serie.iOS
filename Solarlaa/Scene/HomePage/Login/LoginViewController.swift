@@ -53,8 +53,7 @@ class LoginViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDeleg
                         let url = (data["url"] as? String) ?? ""
                         let userDetail = User(token: FBSDKAccessToken.current().tokenString, userId: "", imageProfile: url, firstname: (profile["first_name"] as? String) ?? "", lastname: (profile["last_name"] as? String) ?? "", email: (profile["email"] as? String) ?? "", address: "")
                         CoreFunction.setUserDetail(userDetail: userDetail)
-                        let vc = self.storyboard?.instantiateViewController(withIdentifier: "ContainerViewController")
-                        self.navigationController?.setViewControllers([vc!], animated: false)
+                        self.openMainPage()
                     }
                 }
             }
@@ -62,6 +61,12 @@ class LoginViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDeleg
         else {
             self.hideLoading()
         }
+    }
+    
+    func openMainPage() {
+        let storyboard = UIStoryboard(name: "MainPage", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "ContainerViewController")
+        navigationController?.setViewControllers([vc], animated: true)
     }
     
     // MARK: IBAction
@@ -106,6 +111,7 @@ class LoginViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDeleg
     // MARK: Delegate
     // MARK: GoogleSignInDelegate
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        hideLoading()
         if let error = error {
             print("\(error.localizedDescription)")
         } else {
@@ -120,17 +126,8 @@ class LoginViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDeleg
             // ...
             let userDetail = User(token: idToken, userId: "", imageProfile: image?.absoluteString ?? "", firstname: givenName ?? "", lastname: familyName ?? "", email: email ?? "", address: "")
             CoreFunction.setUserDetail(userDetail: userDetail)
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "ContainerViewController")
-            navigationController?.setViewControllers([vc!], animated: false)
+            self.openMainPage()
         }
         
-    }
-    
-    func sign(inWillDispatch signIn: GIDSignIn!, error: Error!) {
-        hideLoading()
-    }
-    
-    func sign(_ signIn: GIDSignIn!, dismiss viewController: UIViewController!) {
-        dismiss(animated: true, completion: nil)
     }
 }

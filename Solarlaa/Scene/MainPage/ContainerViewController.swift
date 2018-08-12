@@ -12,7 +12,8 @@ import GoogleSignIn
 
 class ContainerViewController: UIViewController, MainViewControllerDelegate {
 
-    // MARK: IBAction
+    // MARK: IBOulet
+    @IBOutlet weak var viewSideMenu: UIView!
     @IBOutlet weak var sideMenuWidth: NSLayoutConstraint!
     @IBOutlet weak var sideMenuLeading: NSLayoutConstraint!
     @IBOutlet weak var viewCancelTouch: UIView!
@@ -34,6 +35,11 @@ class ContainerViewController: UIViewController, MainViewControllerDelegate {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: true)
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        viewSideMenu.isHidden = false
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -54,8 +60,9 @@ class ContainerViewController: UIViewController, MainViewControllerDelegate {
     @objc func didTapLogout() {
         FBSDKLoginManager().logOut()
         GIDSignIn.sharedInstance().signOut()
-        let vc = storyboard?.instantiateViewController(withIdentifier: "HomePageViewController")
-        navigationController?.setViewControllers([vc!], animated: true)
+        let storyboard = UIStoryboard(name: "HomePage", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "HomePageViewController")
+        navigationController?.setViewControllers([vc], animated: true)
     }
     
     @objc private func viewCancelTouchTapped() {

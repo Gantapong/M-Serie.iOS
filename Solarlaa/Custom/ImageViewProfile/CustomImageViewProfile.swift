@@ -61,7 +61,7 @@ class CustomImageViewProfile: UIImageView, UIImagePickerControllerDelegate, UINa
     }
     
     func initGUI(){
-        self.layer.cornerRadius = 5
+        self.layer.cornerRadius = self.frame.size.height / 2
         self.clipsToBounds = true
         //        self.backgroundColor = UIColor.lightGray
         super.image = UIImage(named: "blank_image")
