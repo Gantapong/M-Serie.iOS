@@ -10,16 +10,17 @@ import UIKit
 import FBSDKLoginKit
 import GoogleSignIn
 
-class ContainerViewController: UIViewController, MainViewControllerDelegate {
+class ContainerViewController: UIViewController {
 
     // MARK: IBOulet
     @IBOutlet weak var viewSideMenu: UIView!
     @IBOutlet weak var sideMenuWidth: NSLayoutConstraint!
     @IBOutlet weak var sideMenuLeading: NSLayoutConstraint!
+    @IBOutlet weak var viewMainWidth: NSLayoutConstraint!
     @IBOutlet weak var viewCancelTouch: UIView!
     
     // MARK: Properties
-    var mainViewController: MainViewController?
+    var mainPageNavigationController: MainPageNavigationController?
     var sideMenuViewController: SideMenuViewController?
     var isSideMenuShow: Bool = false
     var translationInSideMenu: CGFloat?
@@ -27,6 +28,8 @@ class ContainerViewController: UIViewController, MainViewControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        viewMainWidth.constant = UIScreen.main.bounds.width
+        NotificationCenter.default.addObserver(self, selector: #selector(didHamburgerTapped), name: .hamburgerTapped, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(didTapLogout), name: .didTapLogout, object: nil)
         setupGUI()
     }
@@ -48,13 +51,34 @@ class ContainerViewController: UIViewController, MainViewControllerDelegate {
     
     // MARK: Methods
     private func setupGUI() {
-//        sideMenuWidth.constant = UIScreen.main.bounds.size.width - 80
-//        sideMenuLeading.constant = -sideMenuWidth.constant
         viewCancelTouch.isHidden = true
         let tap = UITapGestureRecognizer(target: self, action: #selector(viewCancelTouchTapped))
         tap.numberOfTapsRequired = 1
         tap.cancelsTouchesInView = false
         viewCancelTouch.addGestureRecognizer(tap)
+    }
+    
+    func showHideSideMenu(_ isShow: Bool) {
+        isSideMenuShow = isShow
+        if isShow {
+            sideMenuLeading.constant = 0
+        }
+        else {
+            sideMenuLeading.constant = -sideMenuWidth.constant
+        }
+        UIView.animate(withDuration: 0.25) {
+            self.view.layoutIfNeeded()
+            if self.isSideMenuShow {
+                self.viewCancelTouch.isHidden = false
+            }
+            else {
+                self.viewCancelTouch.isHidden = true
+            }
+        }
+    }
+    
+    @objc func didHamburgerTapped() {
+        showHideSideMenu(!isSideMenuShow)
     }
     
     @objc func didTapLogout() {
@@ -152,39 +176,14 @@ class ContainerViewController: UIViewController, MainViewControllerDelegate {
             }
         }
     }
-    
-    // MARK: Delegate
-    // MARK: MainViewControllerDelegate
-    func showHideSideMenu(_ isShow: Bool) {
-        isSideMenuShow = isShow
-        if isShow {
-            sideMenuLeading.constant = 0
-        }
-        else {
-            sideMenuLeading.constant = -sideMenuWidth.constant
-        }
-        UIView.animate(withDuration: 0.25) {
-            self.view.layoutIfNeeded()
-            if self.isSideMenuShow {
-                self.viewCancelTouch.isHidden = false
-            }
-            else {
-                self.viewCancelTouch.isHidden = true
-            }
-        }
-        mainViewController?.isShowSideMenu = isShow
-    }
-    
+
     // MARK: Segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "SideMenuViewController" {
             sideMenuViewController = segue.destination as? SideMenuViewController
         }
-        else if segue.identifier == "MainViewController" {
-            if let navVC = segue.destination as? UINavigationController {
-                mainViewController = navVC.viewControllers.first as? MainViewController
-                mainViewController?.delegate = self
-            }
+        else if segue.identifier == "MainPageNavigationController" {
+            mainPageNavigationController = segue.destination as? MainPageNavigationController
         }
     }
 }

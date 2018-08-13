@@ -33,7 +33,7 @@
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="80l-Mv-brH">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                         <connections>
-                                            <segue destination="sHz-bT-IKN" kind="embed" identifier="MainViewController" id="0oB-7B-V4G"/>
+                                            <segue destination="sHz-bT-IKN" kind="embed" identifier="MainPageNavigationController" id="0oB-7B-V4G"/>
                                         </connections>
                                     </containerView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OQB-XG-8aM">
@@ -49,6 +49,7 @@
                                     <constraint firstItem="OQB-XG-8aM" firstAttribute="top" secondItem="mrq-fh-4nF" secondAttribute="top" id="9YW-gb-q7j"/>
                                     <constraint firstItem="80l-Mv-brH" firstAttribute="top" secondItem="mrq-fh-4nF" secondAttribute="top" id="Np8-11-qpt"/>
                                     <constraint firstItem="OQB-XG-8aM" firstAttribute="leading" secondItem="mrq-fh-4nF" secondAttribute="leading" id="OY6-XN-UOp"/>
+                                    <constraint firstAttribute="width" constant="375" id="bqT-zr-rhu"/>
                                     <constraint firstAttribute="bottom" secondItem="80l-Mv-brH" secondAttribute="bottom" id="cGt-Bi-CdR"/>
                                     <constraint firstAttribute="bottom" secondItem="OQB-XG-8aM" secondAttribute="bottom" id="gqO-PO-oXM"/>
                                     <constraint firstItem="80l-Mv-brH" firstAttribute="leading" secondItem="mrq-fh-4nF" secondAttribute="leading" id="rOl-cZ-GFw"/>
@@ -58,7 +59,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="dbH-WZ-X0D" firstAttribute="top" secondItem="N6U-SO-kOc" secondAttribute="top" id="BZO-iz-i9E"/>
-                            <constraint firstAttribute="trailing" secondItem="mrq-fh-4nF" secondAttribute="trailing" id="CVs-uh-Xe6"/>
                             <constraint firstItem="mrq-fh-4nF" firstAttribute="leading" secondItem="dbH-WZ-X0D" secondAttribute="trailing" id="IJx-rm-eSn"/>
                             <constraint firstAttribute="bottom" secondItem="dbH-WZ-X0D" secondAttribute="bottom" id="W5n-LE-t33"/>
                             <constraint firstItem="mrq-fh-4nF" firstAttribute="top" secondItem="N6U-SO-kOc" secondAttribute="top" id="ZKt-aX-pxR"/>
@@ -75,6 +75,7 @@
                         <outlet property="sideMenuLeading" destination="aHn-Wx-WNC" id="K7V-PL-mz4"/>
                         <outlet property="sideMenuWidth" destination="5uj-CK-BLP" id="zWw-SR-9l5"/>
                         <outlet property="viewCancelTouch" destination="OQB-XG-8aM" id="2lQ-bJ-Ur0"/>
+                        <outlet property="viewMainWidth" destination="bqT-zr-rhu" id="5zi-Oq-2oP"/>
                         <outlet property="viewSideMenu" destination="dbH-WZ-X0D" id="gbJ-pW-nbo"/>
                     </connections>
                 </viewController>
@@ -170,7 +171,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SXz-XB-F9v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1872" y="826"/>
+            <point key="canvasLocation" x="1568" y="824"/>
         </scene>
         <!--Side Menu Table View Controller-->
         <scene sceneID="I99-so-l4g">
@@ -673,50 +674,22 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CGq-eW-w3F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1872" y="1499"/>
+            <point key="canvasLocation" x="1568" y="1545"/>
         </scene>
-        <!--Main View Controller-->
-        <scene sceneID="CoP-fN-ga0">
-            <objects>
-                <viewController storyboardIdentifier="MainViewController" id="9G4-QU-uAx" customClass="MainViewController" customModule="Solarlaa" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="nVf-1o-ulw">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="SK4-SG-20w"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="DMB-8a-Q01">
-                        <barButtonItem key="leftBarButtonItem" title="Menu" id="20I-Tz-gIu">
-                            <connections>
-                                <action selector="btnHamburgerTapped:" destination="9G4-QU-uAx" id="LOG-3a-shj"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="btnHamburger" destination="20I-Tz-gIu" id="Ep6-Bz-FZ3"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hsJ-5k-SRt" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3231" y="825"/>
-        </scene>
-        <!--Navigation Controller-->
+        <!--Main Page Navigation Controller-->
         <scene sceneID="fNc-iV-ppC">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sHz-bT-IKN" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="MainPageNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="sHz-bT-IKN" customClass="MainPageNavigationController" customModule="Solarlaa" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ep0-dk-3bp">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="9G4-QU-uAx" kind="relationship" relationship="rootViewController" id="jhy-pO-liY"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fpi-D5-4kk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2460" y="825"/>
+            <point key="canvasLocation" x="2217" y="824"/>
         </scene>
     </scenes>
 </document>

@@ -1,18 +1,17 @@
 //
-//  MyProfileViewController.swift
+//  ManageDeviceViewController.swift
 //  Solarlaa
 //
-//  Created by GISC on 4/8/2561 BE.
+//  Created by GISC on 13/8/2561 BE.
 //  Copyright © 2561 Nortisgroup. All rights reserved.
 //
 
 import UIKit
 
-class MyProfileViewController: UIViewController {
+class ManageDeviceViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let a = Configurators.messageTH.tryAgain
         // Do any additional setup after loading the view.
         setupGUI()
     }

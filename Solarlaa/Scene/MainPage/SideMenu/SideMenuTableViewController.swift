@@ -8,8 +8,16 @@
 
 import UIKit
 
-protocol SideMenuTableViewControllerDelegate {
-    func didChooseMenu()
+enum SideMenu {
+    case myProfile
+    case manageDevice
+    case monitoring
+    case summaryEnergyUsage
+    case sSeries
+    case notification
+    case setting
+    case help
+    case logout
 }
 
 class SideMenuTableViewController: UITableViewController {
@@ -26,7 +34,6 @@ class SideMenuTableViewController: UITableViewController {
     @IBOutlet weak var logout: UITableViewCell!
     
     // MARK: Properties
-    var delegate: SideMenuTableViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,8 +56,31 @@ class SideMenuTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if tableView.cellForRow(at: indexPath) == logout {
-            NotificationCenter.default.post(name: .didTapLogout, object: nil, userInfo: [:])
+        var userInfo = [String: SideMenu]()
+        if let cell = tableView.cellForRow(at: indexPath) {
+            switch cell {
+            case myProfile:
+                userInfo["menu"] = .myProfile
+            case manageDevice:
+                userInfo["menu"] = .manageDevice
+            case monitoring:
+                userInfo["menu"] = .monitoring
+            case summaryEnergyUsage:
+                userInfo["menu"] = .summaryEnergyUsage
+            case sSeries:
+                userInfo["menu"] = .sSeries
+            case notification:
+                userInfo["menu"] = .notification
+            case setting:
+                userInfo["menu"] = .setting
+            case help:
+                userInfo["menu"] = .help
+            case logout:
+                userInfo["menu"] = .logout
+            default:
+                break
+            }
+            NotificationCenter.default.post(name: .didChooseMenuFromSideMenu, object: nil, userInfo: userInfo)
         }
     }
 

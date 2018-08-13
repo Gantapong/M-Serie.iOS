@@ -53,6 +53,7 @@ extension UIColor{
 
 extension Notification.Name {
     static let didChooseMenuFromSideMenu = Notification.Name("didChooseMenuFromSideMenu")
+    static let hamburgerTapped = Notification.Name("hamburgerTapped")
     static let didTapLogout = Notification.Name("didTapLogout")
     static let didChangeLanguage = Notification.Name("didChangeLanguage")
 }

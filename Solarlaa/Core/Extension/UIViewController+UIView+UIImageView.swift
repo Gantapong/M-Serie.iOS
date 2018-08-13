@@ -44,6 +44,15 @@ extension UIViewController {
             }
         }
     }
+    
+    func addHamburger() {
+        let hamburger = UIBarButtonItem(title: "Menu", style: .plain, target: self, action: #selector(hamburgerTapped))
+        navigationItem.setLeftBarButton(hamburger, animated: true)
+    }
+    
+    @objc func hamburgerTapped() {
+        NotificationCenter.default.post(name: .hamburgerTapped, object: nil, userInfo: nil)
+    }
 }
 
 extension UIView {
